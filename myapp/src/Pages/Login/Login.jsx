@@ -15,7 +15,7 @@ import {
   LabelMin,
 } from './styles';
 
-const Home = () => {
+const Login = () => {
   const [errorMessage] = useState();
   const [loading, setLoading] = useState(false);
   const [handleFormSubmit] = useState();
@@ -56,4 +56,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Login;
