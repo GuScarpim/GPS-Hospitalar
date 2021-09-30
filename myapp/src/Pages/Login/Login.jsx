@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Input from '../../Components/Molecules/Input';
 import Button from '../../Components/Atoms/Button';
 import ErrorMessage from '../../Components/Atoms/ErrorMessage';
-import LogoGps from './images/gps-hospitalar-logo-white.png';
+import LogoGps from '../../Assets/images/gps-hospitalar-logo-white.png';
 
 import {
   Container,
