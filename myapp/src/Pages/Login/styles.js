@@ -12,18 +12,6 @@ export const Container = styled.div`
   flex-direction: column;
 `
 
-export const ContentLogo = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 50px 0;
-`
-
-export const Logo = styled.img`
-  width: 200px;
-  height: auto;
-`
-
 export const Card = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px 20px 0px 0px;

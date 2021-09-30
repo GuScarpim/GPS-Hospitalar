@@ -11,9 +11,9 @@ import {
   Title,
   FormCustom,
   LabelMin,
-} from './styles';
+} from '../Login/styles';
 
-const Login = () => {
+const Register = () => {
   const [errorMessage] = useState();
   const [loading, setLoading] = useState(false);
   const [handleFormSubmit] = useState();
@@ -23,7 +23,7 @@ const Login = () => {
       <Logo />
 
       <Card>
-        <Title>Login</Title>
+        <Title>Cadastro</Title>
 
         <FormCustom onSubmit={handleFormSubmit}>
           <Input
@@ -33,23 +33,48 @@ const Login = () => {
           />
 
           <Input
+            name='email'
+            label='Email'
+            type='email'
+            placeholder='Digite seu email'
+          />
+
+          <Input
+            name='data'
+            label='Data de nascimento'
+            type='date'
+            placeholder='DD/MM/YYYY'
+          />
+
+          <Input
             label='Senha'
             type='password'
             name='password'
             placeholder='Digite sua senha'
           />
 
+          <Input
+            label='Confirme sua senha'
+            type='password'
+            name='password'
+            placeholder='Confirme sua senha'
+          />
+
           {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
 
-          <Button isLoading={loading} type='button' onClick={() => setLoading(true)}>
-            Entrar
+          <Button
+            isLoading={loading}
+            type='button'
+            onClick={() => setLoading(true)}
+          >
+            Cadastrar
           </Button>
 
-          <LabelMin to='/cadastro'>Ainda não tem uma conta?</LabelMin>
+          <LabelMin to='/'>Já possui um conta?</LabelMin>
         </FormCustom>
       </Card>
     </Container>
   );
 };
 
-export default Login;
+export default Register;

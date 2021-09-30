@@ -4,9 +4,16 @@ const routes = [
   {
     path: '/',
     component: lazy(() => import('../../Pages/Login/')),
-    name: 'index',
+    name: 'login',
     exact: true,
     isPrivate: true
+  },
+  {
+  path: '/cadastro',
+  component: lazy(() => import('../../Pages/Register/')),
+    name: 'cadastro',
+      exact: true,
+        isPrivate: true
   },
 ]
 
