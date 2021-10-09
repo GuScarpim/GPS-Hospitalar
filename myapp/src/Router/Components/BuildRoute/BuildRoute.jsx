@@ -9,9 +9,9 @@ const BuildRoute = ({ component, path, routes, exact, isPrivate }) => {
   const hasAccess = !isPrivate ? true : isAuthenticated();
 
   const Redirecionador = () => {
-    window.location.assign('/login');
+    window.location.assign('/');
 
-    return <Redirect to='/login' />;
+    return <Redirect to='/' />;
   };
 
   return (

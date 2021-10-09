@@ -6,15 +6,22 @@ const routes = [
     component: lazy(() => import('../../Pages/Login/')),
     name: 'login',
     exact: true,
-    isPrivate: true
+    isPrivate: false
   },
   {
   path: '/cadastro',
   component: lazy(() => import('../../Pages/Register/')),
     name: 'cadastro',
-      exact: true,
-        isPrivate: true
+    exact: true,
+    isPrivate: false
   },
+  {
+    path: '/home',
+    component: lazy(() => import('../../Pages/Home/')),
+    name: 'home',
+    exact: true,
+    isPrivate: true
+  }
 ]
 
 export default routes
