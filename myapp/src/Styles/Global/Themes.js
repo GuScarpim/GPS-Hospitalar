@@ -26,6 +26,7 @@ const themes = {
     successLighter: '#A2F0BD',
     danger: '#F38080',
     alert: '#FFECB0',
+    transparent: 'transparent'
   },
   fonts: {
     size: {

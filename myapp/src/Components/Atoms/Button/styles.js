@@ -6,6 +6,17 @@ const hoverCss = css`
   border: 1px solid ${({ theme }) => theme.colors.primary};
 `
 
+const Emergency = css`
+  margin-top: -15px;
+  background: ${({ theme }) => theme.colors.secondaryDarker};
+  border: 1px solid ${({ theme }) => theme.colors.secondaryDarker} !important;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.secondaryDarker} !important;
+    background: ${({ theme }) => theme.colors.transparent} !important;
+  }
+`
+
 export const ButtonContainer = styled.button`
   width: 100%;
   color: ${({ theme }) => theme.colors.white};
@@ -21,6 +32,7 @@ export const ButtonContainer = styled.button`
   font: normal normal bold 18px 'Open-Sans', sans-serif;
   cursor: ${({ isLoading }) => isLoading ? 'wait' : 'pointer'};
   outline: none;
+  ${({ emergency }) => emergency && Emergency};
 
   &:hover {
     ${({ isLoading }) => !isLoading && hoverCss}

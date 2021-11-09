@@ -30,7 +30,7 @@ const BuildRoute = ({ component, path, routes, exact, isPrivate }) => {
 };
 
 BuildRoute.propTypes = {
-  component: PropTypes.node.isRequired,
+  component: PropTypes.any,
   path: PropTypes.string.isRequired,
   exact: PropTypes.bool.isRequired,
   isPrivate: PropTypes.bool.isRequired,

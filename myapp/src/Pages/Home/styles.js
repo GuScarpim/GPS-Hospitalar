@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Map } from 'google-maps-react';
+// import { Map } from 'google-maps-react';
 
 export const Container = styled.div`
   background: ${({ theme }) => theme.colors.primaryDarker};
@@ -12,6 +12,8 @@ export const Container = styled.div`
   flex-direction: column;
 `
 
-export const MapCustom = styled(Map)`
-  max-width: calc(100% - 60px);
-`
+// export const MapCustom = styled(Map)`
+//   max-width: calc(100% - 20px);
+//   margin-left: -20px;
+//   max-height: 80%;
+// `

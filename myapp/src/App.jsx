@@ -6,6 +6,7 @@ import GlobalStyle from './Styles/Global';
 import themes from './Styles/Global/Themes';
 
 import { getRoutes, RouterComponent } from './Router';
+import 'leaflet/dist/leaflet.css';
 
 import { ThemeProvider } from 'styled-components';
 
