@@ -26,11 +26,7 @@ const Login = () => {
         <Title>Login</Title>
 
         <FormCustom onSubmit={handleFormSubmit}>
-          <Input
-            name='username'
-            label='Nome'
-            placeholder='Digite seu nome'
-          />
+          <Input name='username' label='Nome' placeholder='Digite seu nome' />
 
           <Input
             label='Senha'
@@ -41,8 +37,20 @@ const Login = () => {
 
           {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
 
-          <Button isLoading={loading} type='button' onClick={() => setLoading(true)}>
+          <Button
+            isLoading={loading}
+            type='button'
+            onClick={() => setLoading(true)}
+          >
             Entrar
+          </Button>
+          <Button
+            emergency
+            isLoading={loading}
+            type='button'
+            onClick={() => setLoading(true)}
+          >
+            Entrar sem login (Emergência)
           </Button>
 
           <LabelMin to='/cadastro'>Ainda não tem uma conta?</LabelMin>
