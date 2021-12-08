@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import 'leaflet/dist/leaflet.css';
 // import { Map } from 'google-maps-react';
 
 export const Container = styled.div`
