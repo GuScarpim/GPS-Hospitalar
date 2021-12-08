@@ -4,19 +4,27 @@ import Input from '../../Components/Molecules/Input';
 import Button from '../../Components/Atoms/Button';
 import ErrorMessage from '../../Components/Atoms/ErrorMessage';
 import Logo from '../../Components/Atoms/Logo';
+import { useHistory } from 'react-router';
 
-import {
-  Container,
-  Card,
-  Title,
-  FormCustom,
-  LabelMin,
-} from './styles';
+import { Container, Card, Title, FormCustom, LabelMin } from './styles';
 
 const Login = () => {
   const [errorMessage] = useState();
   const [loading, setLoading] = useState(false);
   const [handleFormSubmit] = useState();
+  const history = useHistory();
+
+  function login(tipo) {
+    if (!tipo) {
+      setLoading(true);
+      setTimeout(() => {
+        setLoading(false);
+        history.push('/home');
+      }, 2000);
+    } else {
+      history.push('/home');
+    }
+  }
 
   return (
     <Container>
@@ -26,9 +34,15 @@ const Login = () => {
         <Title>Login</Title>
 
         <FormCustom onSubmit={handleFormSubmit}>
-          <Input name='username' label='Nome' placeholder='Digite seu nome' />
+          <Input
+            required
+            name='username'
+            label='Nome'
+            placeholder='Digite seu nome'
+          />
 
           <Input
+            required
             label='Senha'
             type='password'
             name='password'
@@ -37,19 +51,10 @@ const Login = () => {
 
           {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
 
-          <Button
-            isLoading={loading}
-            type='button'
-            onClick={() => setLoading(true)}
-          >
+          <Button isLoading={loading} type='button' onClick={login}>
             Entrar
           </Button>
-          <Button
-            emergency
-            isLoading={loading}
-            type='button'
-            onClick={() => setLoading(true)}
-          >
+          <Button emergency type='button' onClick={() => login('emergency')}>
             Entrar sem login (Emergência)
           </Button>
 
