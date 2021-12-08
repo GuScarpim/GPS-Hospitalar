@@ -67,14 +67,14 @@ const Home = ({ google }) => {
   //   bounds.extend(points[i]);
   // }
 
-  const position1 = [-23.497387793950786, -46.404823065278954];
-  const position = [geolocation.lat, geolocation.lng];
+  const position = [-23.497387793950786, -46.404823065278954];
+  // const position = [geolocation.lat, geolocation.lng];
 
   return (
     <Container>
       <Logo />
       <Card>
-        <MapContainer
+        {/* <MapContainer
           center={[51.505, -0.09]}
           zoom={13}
           scrollWheelZoom={false}
@@ -89,8 +89,8 @@ const Home = ({ google }) => {
               A pretty CSS3 popup. <br /> Easily customizable.
             </Popup>
           </Marker>
-        </MapContainer>
-        {/* <MapContainer
+        </MapContainer> */}
+        <MapContainer
           center={position}
           zoom={15}
           style={{ width: '100%', height: '100%' }}
@@ -101,47 +101,18 @@ const Home = ({ google }) => {
             <Popup>Você está aqui!</Popup>
           </Marker>
 
-          {stores?.map((store, index) => {
-            return (
-              <Marker key={index} position={position}>
-                <Popup
-                  closeButton={false}
-                  minWidth={240}
-                  maxWidth={240}
-                  className='map-popup'
-                >
-                  {store?.name}
-
-                  <div>AAAA</div>
-                </Popup>
-              </Marker>
-            );
-          })}
-        </MapContainer> */}
-        {/* <MapCustom
-          google={google}
-          onClick={onMapClicked}
-          style={{ height: '100%', position: 'relative', width: '100%' }}
-          zoom={14}
-          bounds={bounds}
-          initialCenter={{
-            lat: geolocation.lat,
-            lng: geolocation.lng,
-          }}
-        >
-          {stores.map((store, index) => {
-            return (
-              <div key={index}>
-                <Marker
-                  name={store.name}
-                  title={store.name}
-                  onClick={onMarkerClick}
-                  position={{ lat: store.latitude, lng: store.longitude }}
-                />
-              </div>
-            );
-          })}
-        </MapCustom> */}
+          {/* <Marker position={position}>
+            <Popup
+              closeButton={false}
+              minWidth={240}
+              maxWidth={240}
+              className='map-popup'
+            >
+              Hospital
+              <div>AAAA</div>
+            </Popup>
+          </Marker> */}
+        </MapContainer>
       </Card>
     </Container>
   );

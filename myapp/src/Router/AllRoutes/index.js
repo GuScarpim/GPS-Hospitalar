@@ -21,6 +21,13 @@ const routes = [
     name: 'home',
     exact: true,
     isPrivate: true
+  },
+  {
+    path: '/hospitais',
+    component: lazy(() => import('../../Pages/SelectHospital/')),
+    name: 'hospitais',
+    exact: true,
+    isPrivate: true
   }
 ]
 
