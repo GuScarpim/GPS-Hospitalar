@@ -1,17 +1,17 @@
-import React, { Suspense, StrictMode } from 'react';
+import React, { Suspense, StrictMode } from 'react'
 
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom'
 
-import GlobalStyle from './Styles/Global';
-import themes from './Styles/Global/Themes';
+import GlobalStyle from './Styles/Global'
+import themes from './Styles/Global/Themes'
 
-import { getRoutes, RouterComponent } from './Router';
-import 'leaflet/dist/leaflet.css';
+import { getRoutes, RouterComponent } from './Router'
+import 'leaflet/dist/leaflet.css'
 
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components'
 
 const App = () => {
-  const routes = getRoutes();
+  const routes = getRoutes()
 
   return (
     <StrictMode>
@@ -24,7 +24,7 @@ const App = () => {
         </Router>
       </ThemeProvider>
     </StrictMode>
-  );
-};
+  )
+}
 
-export default App;
+export default App

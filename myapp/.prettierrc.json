@@ -1,0 +1,14 @@
+{
+  "singleQuote": true,
+  "tsxSingleQuote": true,
+  "semi": false,
+  "trailingComma": "none",
+  "semicolon": [
+    true,
+    "never"
+  ],
+  "tslint.autoFixOnSave": [
+    "semicolon"
+  ],
+  "printWidth": 80
+}
